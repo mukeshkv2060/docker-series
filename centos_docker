@@ -1,0 +1,15 @@
+docker pull centos 
+docker run -i -t centos
+
+[root@4f0b435cdbd7 /]# yum install man
+...
+[root@4f0b435cdbd7 /]# man man
+No manual entry for man
+ save our change:
+
+[root@4f0b435cdbd7 /]# exit
+
+$ docker commit 4f0b435cdbd7 man-centos
+$ docker run -i -t man-centos
+
+
